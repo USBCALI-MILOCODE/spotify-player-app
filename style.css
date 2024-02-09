@@ -120,15 +120,3 @@ img {
 .pointer {
   cursor: pointer;
 }
-
-
-.time-bar {
-  width: 100%;
-  height: 5px;
-  background-color: #888;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: #1ED760;
-}
