@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
+:root {
+  --sombra: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --verde: #1ED760;
+  --negro: #000000;
+  --blanco: #fdfdfd;
+  --grisClaro: #B3B3B3;
+  --grisOscuro: #4D4D4D;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -15,108 +24,76 @@ body {
   height: 100vh;
 }
 
-div {
-  display: flex;
-}
-
-i {
-  font-size: 1.4em;
-  color: #1ED760;
-  cursor: pointer;
+audio {
+  display: none;
 }
 
 img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10%;
 }
-
-
-.pointer {
-  cursor: pointer;
-}
-
-
 
 .player {
+  background-color: var(--negro);
+  box-shadow: var(--sombra);
+  border-radius: 10px;
+  width: 80%;
   display: flex;
-  align-items: center;
-  width: 70%;
-  height: 150px;
-  background-color: #000000;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  flex-direction: column;
 
-  audio {
-    display: none;
-  }
 
   .info {
     display: flex;
-    align-items: center;
-    margin-left: 2em;
+    flex-direction: column;
+    margin: 10px 20px 0px 20px;
 
     .img {
-      padding: .5em;
-      width: 160px;
-      height: 100%
+      margin-top: 10px;
+      width: 100%;
+      margin-bottom: 10px;
     }
 
     .track {
-      align-items: center;
+      display: flex;
+      gap: 1em;
 
       .track_info {
-        text-transform: capitalize;
         display: flex;
         flex-direction: column;
-        gap: .3em;
+        margin-left: 5px;
 
         .name {
-          color: #FDFDFD;
-          white-space: nowrap;
-        }
-
-        .name:hover {
-          cursor: pointer;
-          text-decoration: underline;
+          text-transform: capitalize;
+          color: var(--blanco);
         }
 
         .artist {
-          color: #B4B4B4;
-          cursor: pointer;
+          text-transform: capitalize;
+          margin-top: 5px;
+          color: var(--grisClaro);
         }
-
-        .artist:hover {
-          color: #FDFDFD;
-          text-decoration: underline;
-        }
-
       }
 
       .icono {
-        margin-left: 1.5em;
+        color: var(--verde);
       }
-    }
 
+    }
   }
 
   .controls {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    margin-left: 2em;
-    padding: 0 4em 0 4em;
-    position: relative;
-
-    .botones {
-      width: 100%;
-      justify-content: center;
-      gap: 2em;
-    }
+    flex-direction: column-reverse;
+    margin: 10px 20px 20px 20px;
 
     .barra {
+      margin-top: 5px;
       width: 100%;
-      margin-top: 12px;
       justify-content: center;
       align-items: center;
+      display: flex;
 
       .minutos {
         color: #B4B4B4;
@@ -138,40 +115,136 @@ img {
       padding: 0;
       border-radius: 2.5px;
     }
-    
+
     .barra input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none;
       display: none;
       width: 16px;
       height: 16px;
-      background: #fff;
-      /* Color del cursor */
+      background-color: #fff;
       border-radius: 50%;
       position: relative;
       box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
       z-index: 1;
     }
-    
+
     .barra input[type="range"]:hover::-webkit-slider-thumb {
       display: flex;
     }
 
-    .mover {
+    .botones {
       display: flex;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      color: var(--blanco);
+      justify-content: center;
       align-items: center;
-      font-size: 1.6em;
-      color: #B3B3B3;
-    }
+      gap: 2em;
 
-    .mover:hover {
-      color: #FDFDFD;
-    }
+      .play {
+        font-size: 2.5em;
+        transition: transform 0.1s ease-in-out;
+      }
 
-    i {
-      font-size: 3em;
-      color: #FDFDFD;
-    }
+      .play:hover {
+        transform: scale(1.1);
+      }
 
+      .mover {
+        color: var(--grisClaro);
+        font-size: 1.5em;
+        transition: transform 0.1s ease-in-out;
+      }
+
+      .mover:hover {
+        color: var(--blanco);
+      }
+    }
+  }
+}
+
+
+
+@media (min-width: 820px) {
+
+  div {
+    display: flex;
   }
 
+  .player {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 120px;
+    flex-direction: row;
+
+    .info {
+      padding: 0px 10px 0px 10px;
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      /* border: 1px solid red; */
+
+
+      .img {
+        margin-right: 5px;
+        width: 100px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+      }
+
+      .track {
+        display: flex;
+        align-items: center;
+
+        .track_info {
+
+          .name {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    .controls {
+      padding: 0px 10px 0px 10px;
+      margin-right: 1em;
+      margin: 0px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .botones {
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        .play {
+          font-size: 3em;
+        }
+
+        .mover {
+          font-size: 1.5em;
+        }
+      }
+
+      .barra {
+        margin-top: 10px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 820px) {
+  .player {
+    width: 70%;
+  }
 }

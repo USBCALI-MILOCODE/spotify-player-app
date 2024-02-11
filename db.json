@@ -1,0 +1,28 @@
+{
+  "songs": [
+    {
+      "name": "Me gusta tu flow",
+      "artist": "arcángel",
+      "img": "https://t2.genius.com/unsafe/1428x0/https%3A%2F%2Fimages.genius.com%2F06d03c24336a751b2a6eedcc3f0ca1ab.1000x1000x1.png",
+      "src": "./assets/megustatuflow.mp3"
+    },
+    {
+      "name": "JS4E",
+      "artist": "arcángel",
+      "img": "https://t2.genius.com/unsafe/504x504/https%3A%2F%2Fimages.genius.com%2Fda8e98b8527ee9c5b4daf99454915c7e.1000x1000x1.png",
+      "src": "./assets/js4e.mp3"
+    },
+    {
+      "name": "andan diciendo",
+      "artist": "arcángel",
+      "img": "https://t2.genius.com/unsafe/504x504/https%3A%2F%2Fimages.genius.com%2F02a4d90baf3fb01190010d5c37b14cbf.475x475x1.jpg",
+      "src": "./assets/andandiciendo.mp3"
+    },
+    {
+      "name": "pa que la pases bien",
+      "artist": "arcángel",
+      "img": "https://t2.genius.com/unsafe/504x504/https%3A%2F%2Fimages.genius.com%2F8aaf8ff65ebeed59595033ee2fcfe8f2.1000x1000x1.png",
+      "src": "./assets/paquelapasesbien.mp3"
+    }
+  ]
+}
